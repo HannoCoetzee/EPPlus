@@ -43,7 +43,7 @@ namespace EPPlusSamples
 	{
         /// <summary>
         /// Sample 1 - simply creates a new workbook from scratch.
-        /// The workbook contains one worksheet with a simple invertory list
+        /// The workbook contains one worksheet with a simple inventory list
         /// </summary>
         public static string RunSample1()
         {
