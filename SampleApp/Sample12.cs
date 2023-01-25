@@ -38,7 +38,7 @@ using OfficeOpenXml.Drawing.Chart;
 namespace EPPlusSamples
 {
     /// <summary>
-    /// This class shows how to use pivottables 
+    /// This class shows how to use pivot tables 
     /// </summary>
     public static class Sample12
     {
