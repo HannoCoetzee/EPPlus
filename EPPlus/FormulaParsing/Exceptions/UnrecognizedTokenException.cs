@@ -39,7 +39,7 @@ namespace OfficeOpenXml.FormulaParsing.Exceptions
     public class UnrecognizedTokenException : Exception
     {
         public UnrecognizedTokenException(Token token)
-            : base( "Unrecognized token: " + token.Value)
+            : base("Unrecognized token: " + token.Value)
         {
 
         }

@@ -259,7 +259,7 @@ namespace OfficeOpenXml.Drawing.Chart
             }
             set
             {
-                SetXmlNodeString(LINEWIDTH_PATH, (( int )(12700 * value)).ToString(), true);
+                SetXmlNodeString(LINEWIDTH_PATH, ((int)(12700 * value)).ToString(), true);
             }
         }
         //marker line color

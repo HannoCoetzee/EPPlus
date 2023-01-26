@@ -32,7 +32,7 @@ namespace EPPlusTest.FormulaParsing.Excel.Functions.Database
 
                 Assert.IsTrue(database.HasMoreRows);
             }
-            
+
         }
 
         [TestMethod]

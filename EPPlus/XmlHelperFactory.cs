@@ -41,11 +41,11 @@ namespace OfficeOpenXml
     {
         internal XmlHelperInstance(XmlNamespaceManager namespaceManager)
             : base(namespaceManager)
-        {}
+        { }
 
         internal XmlHelperInstance(XmlNamespaceManager namespaceManager, XmlNode topNode)
             : base(namespaceManager, topNode)
-        {}
+        { }
 
     }
 

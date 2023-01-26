@@ -60,7 +60,7 @@ namespace OfficeOpenXml.FormulaParsing.ExpressionGraph.FunctionCompilers
                 }
                 else
                 {
-                    BuildFunctionArguments(compileResult, args);     
+                    BuildFunctionArguments(compileResult, args);
                 }
             }
             return Function.Execute(args, Context);

@@ -65,7 +65,7 @@ namespace OfficeOpenXml.FormulaParsing.ExpressionGraph
             var result = new List<object>();
             foreach (var childExpression in Children)
             {
-                result.Add(_expressionCompiler.Compile(new List<Expression>{ childExpression }).Result);
+                result.Add(_expressionCompiler.Compile(new List<Expression> { childExpression }).Result);
             }
             return new CompileResult(result, DataType.Enumerable);
         }

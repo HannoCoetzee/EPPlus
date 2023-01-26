@@ -44,7 +44,7 @@ namespace OfficeOpenXml.FormulaParsing.ExpressionGraph
         public DecimalExpression(string expression)
             : this(expression, false)
         {
-            
+
         }
 
         public DecimalExpression(string expression, bool negate)

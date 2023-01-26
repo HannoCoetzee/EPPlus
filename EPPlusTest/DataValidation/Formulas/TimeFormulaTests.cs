@@ -31,7 +31,7 @@ namespace EPPlusTest.DataValidation.Formulas
 
             // Act
             var formula = new ExcelDataValidationTime(_sheet, "A1", ExcelDataValidationType.Time, _dataValidationNode, _namespaceManager);
-            
+
             // Assert
             Assert.AreEqual(time.Hour, formula.Formula.Value.Hour);
         }

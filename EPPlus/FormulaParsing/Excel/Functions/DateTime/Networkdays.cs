@@ -21,7 +21,7 @@ namespace OfficeOpenXml.FormulaParsing.Excel.Functions.DateTime
             {
                 result = calculator.ReduceWorkdaysWithHolidays(result, functionArguments[2]);
             }
-            
+
             return new CompileResult(result.NumberOfWorkdays, DataType.Integer);
         }
     }

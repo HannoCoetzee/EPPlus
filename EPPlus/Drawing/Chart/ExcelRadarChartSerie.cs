@@ -81,14 +81,14 @@ namespace OfficeOpenXml.Drawing.Chart
             get
             {
                 string marker = GetXmlNodeString(markerPath);
-                if (marker == "" || marker=="none")
+                if (marker == "" || marker == "none")
                 {
                     return eMarkerStyle.None;
                 }
                 else
                 {
                     return (eMarkerStyle)Enum.Parse(typeof(eMarkerStyle), marker, true);
-                }                
+                }
             }
             internal set
             {

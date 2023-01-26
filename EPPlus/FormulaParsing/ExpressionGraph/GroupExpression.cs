@@ -55,7 +55,7 @@ namespace OfficeOpenXml.FormulaParsing.ExpressionGraph
 
         public override CompileResult Compile()
         {
-            var result =  _expressionCompiler.Compile(Children);
+            var result = _expressionCompiler.Compile(Children);
             if (result.IsNumeric && _isNegated)
             {
                 return new CompileResult(result.ResultNumeric * -1, result.DataType);

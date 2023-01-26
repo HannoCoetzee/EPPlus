@@ -113,7 +113,7 @@ namespace OfficeOpenXml.DataValidation
         private void Init()
         {
             // set schema node order
-            if(ValidationType == ExcelDataValidationType.List)
+            if (ValidationType == ExcelDataValidationType.List)
             {
                 SchemaNodeOrder = new string[]{
                     "type",
@@ -147,7 +147,7 @@ namespace OfficeOpenXml.DataValidation
                     "formula2"
                 };
             }
-            
+
         }
 
         private string CheckAndFixRangeAddress(string address)
@@ -419,7 +419,7 @@ namespace OfficeOpenXml.DataValidation
         {
             var dvAddress = AddressUtility.ParseEntireColumnSelections(address);
             SetXmlNodeString(_sqrefPath, dvAddress);
-            
+
         }
     }
 }

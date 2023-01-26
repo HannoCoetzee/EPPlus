@@ -40,7 +40,7 @@ namespace OfficeOpenXml.FormulaParsing.Excel.Functions
 
         public int CompareTo(object obj)
         {
-            if(obj is double)
+            if (obj is double)
             {
                 return Value.CompareTo((double)obj);
             }
@@ -54,7 +54,7 @@ namespace OfficeOpenXml.FormulaParsing.Excel.Functions
         public override int GetHashCode()
         {
             return base.GetHashCode();
-        }        
+        }
         public static bool operator ==(ExcelDoubleCellValue a, ExcelDoubleCellValue b)
         {
             return a.Value.CompareTo(b.Value) == 0;

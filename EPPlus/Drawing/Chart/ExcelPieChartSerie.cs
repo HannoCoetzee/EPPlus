@@ -67,7 +67,7 @@ namespace OfficeOpenXml.Drawing.Chart
             {
                 if (value < 0 || value > 400)
                 {
-                    throw(new ArgumentOutOfRangeException("Explosion range is 0-400"));
+                    throw (new ArgumentOutOfRangeException("Explosion range is 0-400"));
                 }
                 SetXmlNodeString(explosionPath, value.ToString());
             }
@@ -87,6 +87,6 @@ namespace OfficeOpenXml.Drawing.Chart
                 return _DataLabel;
             }
         }
-       
+
     }
 }

@@ -33,14 +33,14 @@ namespace OfficeOpenXml.FormulaParsing.Excel.Functions.Database
 {
     public class Dvarp : DatabaseFunction
     {
-         public Dvarp()
-            : this(new RowMatcher())
+        public Dvarp()
+           : this(new RowMatcher())
         {
 
         }
 
-         public Dvarp(RowMatcher rowMatcher)
-            : base(rowMatcher)
+        public Dvarp(RowMatcher rowMatcher)
+           : base(rowMatcher)
         {
 
         }

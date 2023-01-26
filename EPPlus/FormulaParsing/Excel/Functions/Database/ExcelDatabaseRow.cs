@@ -54,7 +54,7 @@ namespace OfficeOpenXml.FormulaParsing.Excel.Functions.Database
                 return _items[field];
             }
         }
-        
-        
+
+
     }
 }

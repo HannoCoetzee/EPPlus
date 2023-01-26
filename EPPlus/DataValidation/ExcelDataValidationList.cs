@@ -45,7 +45,7 @@ namespace OfficeOpenXml.DataValidation
     /// </summary>
     public class ExcelDataValidationList : ExcelDataValidationWithFormula<IExcelDataValidationFormulaList>, IExcelDataValidationList
     {
-       
+
         /// <summary>
         /// Constructor
         /// </summary>

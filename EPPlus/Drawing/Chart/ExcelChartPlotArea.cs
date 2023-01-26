@@ -39,13 +39,13 @@ namespace OfficeOpenXml.Drawing.Chart
     /// <summary>
     /// A charts plot area
     /// </summary>
-    public sealed class ExcelChartPlotArea :  XmlHelper
+    public sealed class ExcelChartPlotArea : XmlHelper
     {
         ExcelChart _firstChart;
         internal ExcelChartPlotArea(XmlNamespaceManager ns, XmlNode node, ExcelChart firstChart)
-           : base(ns,node)
-       {
-           _firstChart = firstChart;
+           : base(ns, node)
+        {
+            _firstChart = firstChart;
             if (TopNode.SelectSingleNode("c:dTable", NameSpaceManager) != null)
             {
                 _dataTable = new ExcelChartDataTable(NameSpaceManager, TopNode);
@@ -59,7 +59,7 @@ namespace OfficeOpenXml.Drawing.Chart
             {
                 if (_chartTypes == null)
                 {
-                    _chartTypes = new ExcelChartCollection(_firstChart); 
+                    _chartTypes = new ExcelChartCollection(_firstChart);
                 }
                 return _chartTypes;
             }
@@ -72,7 +72,7 @@ namespace OfficeOpenXml.Drawing.Chart
         /// </summary>
         public ExcelChartDataTable CreateDataTable()
         {
-            if(_dataTable!=null)
+            if (_dataTable != null)
             {
                 throw (new InvalidOperationException("Data table already exists"));
             }

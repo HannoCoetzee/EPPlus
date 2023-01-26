@@ -49,7 +49,7 @@ namespace OfficeOpenXml.FormulaParsing.Excel.Functions.Math
             {
                 return CreateResult(System.Math.Ceiling(number), DataType.Decimal);
             }
-            else if(number % significance == 0)
+            else if (number % significance == 0)
             {
                 return CreateResult(number, DataType.Decimal);
             }

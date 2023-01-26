@@ -48,7 +48,7 @@ namespace OfficeOpenXml.FormulaParsing.ExpressionGraph.FunctionCompilers
         {
             var args = new List<FunctionArgument>();
             Function.BeforeInvoke(Context);
-            for(var x = 0; x < children.Count(); x++)
+            for (var x = 0; x < children.Count(); x++)
             {
                 var child = children.ElementAt(x);
                 //if (x > 0 || Function.SkipArgumentEvaluation)
@@ -63,7 +63,7 @@ namespace OfficeOpenXml.FormulaParsing.ExpressionGraph.FunctionCompilers
                 else
                 {
                     BuildFunctionArguments(null, DataType.Unknown, args);
-                } 
+                }
             }
             return Function.Execute(args, Context);
         }

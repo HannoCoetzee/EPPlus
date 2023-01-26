@@ -37,16 +37,16 @@ using OfficeOpenXml.ConditionalFormatting;
 
 namespace OfficeOpenXml.ConditionalFormatting.Contracts
 {
-  /// <summary>
-  /// IExcelConditionalFormattingWithReverse
-  /// </summary>
-  public interface IExcelConditionalFormattingWithReverse
-  {
-    #region Public Properties
     /// <summary>
-    /// Reverse Attribute
+    /// IExcelConditionalFormattingWithReverse
     /// </summary>
-    bool Reverse { get; set; }
-    #endregion Public Properties
-  }
+    public interface IExcelConditionalFormattingWithReverse
+    {
+        #region Public Properties
+        /// <summary>
+        /// Reverse Attribute
+        /// </summary>
+        bool Reverse { get; set; }
+        #endregion Public Properties
+    }
 }

@@ -37,10 +37,10 @@ namespace OfficeOpenXml.FormulaParsing
 
         public virtual bool IsNamedValue(string key, string ws)
         {
-            if(ws!=null)
+            if (ws != null)
             {
                 var wsNames = _excelDataProvider.GetWorksheetNames(ws);
-                if(wsNames!=null && wsNames.ContainsKey(key))
+                if (wsNames != null && wsNames.ContainsKey(key))
                 {
                     return true;
                 }

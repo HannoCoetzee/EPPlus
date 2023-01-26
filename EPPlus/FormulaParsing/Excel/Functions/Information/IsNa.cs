@@ -41,7 +41,7 @@ namespace OfficeOpenXml.FormulaParsing.Excel.Functions.Information
 
             var v = GetFirstValue(arguments);
 
-            if (v is ExcelErrorValue && ((ExcelErrorValue)v).Type==eErrorType.NA)
+            if (v is ExcelErrorValue && ((ExcelErrorValue)v).Type == eErrorType.NA)
             {
                 return CreateResult(true, DataType.Boolean);
             }

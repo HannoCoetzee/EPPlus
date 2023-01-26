@@ -63,7 +63,7 @@ namespace OfficeOpenXml.FormulaParsing.ExpressionGraph.FunctionCompilers
                 {
                     return ((ErrorHandlingFunction)Function).HandleError(ExcelErrorValue.Values.Value);
                 }
-                
+
             }
             return Function.Execute(args, Context);
         }

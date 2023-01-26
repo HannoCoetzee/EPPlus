@@ -51,7 +51,7 @@ namespace OfficeOpenXml.FormulaParsing.ExpressionGraph.FunctionCompilers
             _specialCompilers.Add(typeof(IfNa), new IfNaFunctionCompiler(repository.GetFunction("ifna"), context));
             foreach (var key in repository.CustomCompilers.Keys)
             {
-              _specialCompilers.Add(key, repository.CustomCompilers[key]);
+                _specialCompilers.Add(key, repository.CustomCompilers[key]);
             }
         }
 

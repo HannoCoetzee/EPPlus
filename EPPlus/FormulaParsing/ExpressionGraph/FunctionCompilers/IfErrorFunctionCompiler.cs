@@ -15,7 +15,7 @@ namespace OfficeOpenXml.FormulaParsing.ExpressionGraph.FunctionCompilers
             : base(function, context)
         {
             Require.That(function).Named("function").IsNotNull();
-          
+
         }
 
         public override CompileResult Compile(IEnumerable<Expression> children)
@@ -34,9 +34,9 @@ namespace OfficeOpenXml.FormulaParsing.ExpressionGraph.FunctionCompilers
                 }
                 else
                 {
-                    args.Add(new FunctionArgument(result.Result)); 
+                    args.Add(new FunctionArgument(result.Result));
                 }
-                
+
             }
             catch (ExcelErrorValueException)
             {

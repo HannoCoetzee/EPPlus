@@ -37,11 +37,11 @@ namespace OfficeOpenXml.FormulaParsing
 
         public IExpressionGraphBuilder GraphBuilder { get; private set; }
 
-        public IExpressionCompiler ExpressionCompiler{ get; private set; }
+        public IExpressionCompiler ExpressionCompiler { get; private set; }
 
-        public FunctionRepository FunctionRepository{ get; private set; }
+        public FunctionRepository FunctionRepository { get; private set; }
 
-        private ParsingConfiguration() 
+        private ParsingConfiguration()
         {
             FunctionRepository = FunctionRepository.Create();
         }

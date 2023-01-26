@@ -57,7 +57,7 @@ namespace EPPlusTest.FormulaParsing
             cache.Clear();
             var id3 = cache.GetNewId();
             Assert.AreEqual(1, id3);
-            
+
         }
     }
 }

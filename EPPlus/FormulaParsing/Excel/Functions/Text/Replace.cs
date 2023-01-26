@@ -52,7 +52,7 @@ namespace OfficeOpenXml.FormulaParsing.Excel.Functions.Text
 
         private string GetLastPart(string text, int startPos, int nCharactersToReplace)
         {
-            int startIx = startPos -1;
+            int startIx = startPos - 1;
             startIx += nCharactersToReplace;
             return text.Substring(startIx, text.Length - startIx);
         }

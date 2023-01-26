@@ -2412,7 +2412,7 @@ namespace EPPlusTest
         {
             var p = OpenTemplatePackage("Issue460.xlsx");
             var ws = p.Workbook.Worksheets[0];
-            var newWs=p.Workbook.Worksheets.Add("NewSheet");
+            var newWs = p.Workbook.Worksheets.Add("NewSheet");
             ws.Cells.Copy(newWs.Cells);
             SaveWorksheet("Issue460_saved.xlsx");
         }

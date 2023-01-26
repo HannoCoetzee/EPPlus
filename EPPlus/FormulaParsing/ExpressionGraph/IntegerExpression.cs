@@ -62,7 +62,7 @@ namespace OfficeOpenXml.FormulaParsing.ExpressionGraph
         public override CompileResult Compile()
         {
             double result = _compiledValue ?? double.Parse(ExpressionString, CultureInfo.InvariantCulture);
-            result = _negate ? result*-1 : result;
+            result = _negate ? result * -1 : result;
             return new CompileResult(result, DataType.Integer);
         }
     }

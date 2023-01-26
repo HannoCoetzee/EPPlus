@@ -55,7 +55,7 @@ namespace OfficeOpenXml.FormulaParsing.ExpressionGraph
             {
                 throw (new Exceptions.ExcelErrorValueException(ExcelErrorValue.Create(eErrorType.Name)));
             }
-            if (name.Value==null)
+            if (name.Value == null)
             {
                 return null;
             }
@@ -77,13 +77,13 @@ namespace OfficeOpenXml.FormulaParsing.ExpressionGraph
                 }
             }
             else
-            {                
+            {
                 var factory = new CompileResultFactory();
                 return factory.Create(name.Value);
             }
 
-            
-            
+
+
             //return new CompileResultFactory().Create(result);
         }
     }

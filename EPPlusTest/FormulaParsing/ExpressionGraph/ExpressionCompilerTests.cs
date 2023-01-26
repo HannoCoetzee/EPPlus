@@ -14,7 +14,7 @@ namespace EPPlusTest.FormulaParsing.ExpressionGraph
     {
         private IExpressionCompiler _expressionCompiler;
         private ExpGraph _graph;
-        
+
         [TestInitialize]
         public void Setup()
         {

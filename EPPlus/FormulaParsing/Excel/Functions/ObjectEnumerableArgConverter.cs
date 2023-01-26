@@ -48,7 +48,7 @@ namespace OfficeOpenXml.FormulaParsing.Excel.Functions
                     }
                     else
                     {
-                       argList.Add(arg.Value);
+                        argList.Add(arg.Value);
                     }
                 })
             ;

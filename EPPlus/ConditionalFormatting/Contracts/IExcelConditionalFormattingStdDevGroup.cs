@@ -37,14 +37,14 @@ using OfficeOpenXml.ConditionalFormatting;
 
 namespace OfficeOpenXml.ConditionalFormatting.Contracts
 {
-	/// <summary>
-  /// IExcelConditionalFormattingStdDevGroup
-	/// </summary>
-  public interface IExcelConditionalFormattingStdDevGroup
-    : IExcelConditionalFormattingRule,
-    IExcelConditionalFormattingWithStdDev
-  {
-		#region Public Properties
-		#endregion Public Properties
-	}
+    /// <summary>
+    /// IExcelConditionalFormattingStdDevGroup
+    /// </summary>
+    public interface IExcelConditionalFormattingStdDevGroup
+      : IExcelConditionalFormattingRule,
+      IExcelConditionalFormattingWithStdDev
+    {
+        #region Public Properties
+        #endregion Public Properties
+    }
 }

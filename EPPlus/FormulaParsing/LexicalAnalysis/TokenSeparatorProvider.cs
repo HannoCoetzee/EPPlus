@@ -38,7 +38,7 @@ namespace OfficeOpenXml.FormulaParsing.LexicalAnalysis
 {
     public class TokenSeparatorProvider : ITokenSeparatorProvider
     {
-       private static readonly Dictionary<string, Token> _tokens;
+        private static readonly Dictionary<string, Token> _tokens;
 
         static TokenSeparatorProvider()
         {

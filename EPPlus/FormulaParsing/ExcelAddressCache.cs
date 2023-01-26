@@ -39,7 +39,7 @@ namespace OfficeOpenXml.FormulaParsing
         /// <returns></returns>
         public int GetNewId()
         {
-            lock(_myLock)
+            lock (_myLock)
             {
                 return _nextId++;
             }
@@ -53,15 +53,15 @@ namespace OfficeOpenXml.FormulaParsing
         /// <returns></returns>
         public bool Add(int id, string address)
         {
-            lock(_myLock)
+            lock (_myLock)
             {
                 if (_addressCache.ContainsKey(id)) return false;
                 _addressCache.Add(id, address);
-                if(EnableLookupCache && !_lookupCache.ContainsKey(address))
+                if (EnableLookupCache && !_lookupCache.ContainsKey(address))
                     _lookupCache.Add(address, id);
                 return true;
             }
-            
+
         }
 
         /// <summary>
@@ -88,12 +88,12 @@ namespace OfficeOpenXml.FormulaParsing
         /// </summary>
         public void Clear()
         {
-            lock(_myLock)
+            lock (_myLock)
             {
                 _addressCache.Clear();
                 _lookupCache.Clear();
                 _nextId = 1;
-            }  
+            }
         }
 
     }

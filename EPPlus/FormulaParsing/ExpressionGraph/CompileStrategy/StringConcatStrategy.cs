@@ -40,7 +40,7 @@ namespace OfficeOpenXml.FormulaParsing.ExpressionGraph.CompileStrategy
         public StringConcatStrategy(Expression expression)
             : base(expression)
         {
-           
+
         }
 
         public override Expression Compile()

@@ -44,7 +44,7 @@ namespace EPPlusSamples
         {
             //Create a macro-enabled workbook from scratch.
             VBASample1();
-            
+
             //Open Sample 1 and add code to change the chart to a bubble chart.
             VBASample2();
 
@@ -56,9 +56,9 @@ namespace EPPlusSamples
             ExcelPackage pck = new ExcelPackage();
 
             //Add a worksheet.
-            var ws=pck.Workbook.Worksheets.Add("VBA Sample");
+            var ws = pck.Workbook.Worksheets.Add("VBA Sample");
             ws.Drawings.AddShape("VBASampleRect", eShapeStyle.RoundRect);
-            
+
             //Create a vba project             
             pck.Workbook.CreateVBAProject();
 
@@ -76,7 +76,7 @@ namespace EPPlusSamples
         }
         private static void VBASample2()
         {
-            FileInfo sample1File = Utils.GetFileInfo("sample1.xlsx",false);
+            FileInfo sample1File = Utils.GetFileInfo("sample1.xlsx", false);
             //Open Sample 1 again
             ExcelPackage pck = new ExcelPackage(sample1File);
             var p = new ExcelPackage();
@@ -106,7 +106,7 @@ namespace EPPlusSamples
             //pck.Workbook.VbaProject.Signature.Certificate = store.Certificates[0];
 
             //And Save as xlsm
-            FileInfo fi =Utils.GetFileInfo("sample15-2.xlsm");
+            FileInfo fi = Utils.GetFileInfo("sample15-2.xlsm");
             pck.SaveAs(fi);
         }
         private static void VBASample3()
@@ -125,11 +125,11 @@ namespace EPPlusSamples
             ws.DefaultColWidth = 3;
             ws.DefaultRowHeight = 15;
 
-            int gridSize=10;
+            int gridSize = 10;
 
             //Create the boards
             var board1 = ws.Cells[2, 2, 2 + gridSize - 1, 2 + gridSize - 1];
-            var board2 = ws.Cells[2, 4+gridSize-1, 2 + gridSize-1, 4 + (gridSize-1)*2];
+            var board2 = ws.Cells[2, 4 + gridSize - 1, 2 + gridSize - 1, 4 + (gridSize - 1) * 2];
             CreateBoard(board1);
             CreateBoard(board2);
             ws.Select("B2");
@@ -148,7 +148,7 @@ namespace EPPlusSamples
 
             //Add the sheet code
             ws.CodeModule.Code = GetCodeModule(codeDir, "BattleshipSheet.txt");
-            var m1=pck.Workbook.VbaProject.Modules.AddModule("Code");
+            var m1 = pck.Workbook.VbaProject.Modules.AddModule("Code");
             string code = GetCodeModule(codeDir, "CodeModule.txt");
 
             //Insert your ships on the right board. you can changes these, but don't cheat ;)
@@ -158,13 +158,13 @@ namespace EPPlusSamples
                 "V9:V11",
                 "O10:Q10",
                 "R11:S11"};
-            
+
             //Note: For security reasons you should never mix external data and code(to avoid code injections!), especially not on a webserver. 
             //If you deside to do that anyway, be very careful with the validation of the data.
             //Be extra carefull if you sign the code.
             //Read more here http://en.wikipedia.org/wiki/Code_injection
 
-            code = string.Format(code, ships[0],ships[1],ships[2],ships[3],ships[4], board1.Address, board2.Address);  //Ships are injected into the constants in the module
+            code = string.Format(code, ships[0], ships[1], ships[2], ships[3], ships[4], board1.Address, board2.Address);  //Ships are injected into the constants in the module
             m1.Code = code;
 
             //Ships are displayed with a black background
@@ -173,9 +173,9 @@ namespace EPPlusSamples
             ws.Cells[shipsaddress].Style.Fill.BackgroundColor.SetColor(Color.Black);
 
             var m2 = pck.Workbook.VbaProject.Modules.AddModule("ComputerPlay");
-            m2.Code = GetCodeModule(codeDir, "ComputerPlayModule.txt"); 
-            var c1 = pck.Workbook.VbaProject.Modules.AddClass("Ship",false);
-            c1.Code = GetCodeModule(codeDir, "ShipClass.txt"); 
+            m2.Code = GetCodeModule(codeDir, "ComputerPlayModule.txt");
+            var c1 = pck.Workbook.VbaProject.Modules.AddClass("Ship", false);
+            c1.Code = GetCodeModule(codeDir, "ShipClass.txt");
 
             //Add the info text shape.
             var tb = ws.Drawings.AddShape("txtInfo", eShapeStyle.Rect);
@@ -199,7 +199,7 @@ namespace EPPlusSamples
             ws.SetValue("B24", "Log");
             ws.Cells["B24"].Style.Font.Bold = true;
             ws.Cells["B24:X24"].Style.Border.BorderAround(ExcelBorderStyle.Thin, Color.Black);
-            var cf=ws.Cells["B25:B224"].ConditionalFormatting.AddContainsText();
+            var cf = ws.Cells["B25:B224"].ConditionalFormatting.AddContainsText();
             cf.Text = "hit";
             cf.Style.Font.Color.Color = Color.Red;
 
@@ -225,26 +225,26 @@ namespace EPPlusSamples
             return File.ReadAllText(Utils.GetFileInfo(codeDir, fileName, false).FullName);
         }
 
-        private static void AddChart(ExcelRange rng,string name, string prefix)
+        private static void AddChart(ExcelRange rng, string name, string prefix)
         {
             var chrt = (ExcelPieChart)rng.Worksheet.Drawings.AddChart(name, eChartType.Pie);
-            chrt.SetPosition(rng.Start.Row-1, 0, rng.Start.Column-1, 0);
-            chrt.To.Row = rng.Start.Row+9;
+            chrt.SetPosition(rng.Start.Row - 1, 0, rng.Start.Column - 1, 0);
+            chrt.To.Row = rng.Start.Row + 9;
             chrt.To.Column = rng.Start.Column + 9;
             chrt.Style = eChartStyle.Style18;
             chrt.DataLabel.ShowPercent = true;
 
             var serie = chrt.Series.Add(rng.Offset(2, 2, 1, 2), rng.Offset(1, 2, 1, 2));
             serie.Header = "Hits";
-            
+
             chrt.Title.Text = "Hit ratio";
-            
+
             var n1 = rng.Worksheet.Names.Add(prefix + "Misses", rng.Offset(2, 2));
             n1.Value = 0;
             var n2 = rng.Worksheet.Names.Add(prefix + "Hits", rng.Offset(2, 3));
             n2.Value = 0;
             rng.Offset(1, 2).Value = "Misses";
-            rng.Offset(1, 3).Value = "Hits";            
+            rng.Offset(1, 3).Value = "Hits";
         }
 
         private static void CreateBoard(ExcelRange rng)

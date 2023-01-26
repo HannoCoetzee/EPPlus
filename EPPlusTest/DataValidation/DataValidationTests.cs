@@ -33,7 +33,7 @@ namespace EPPlusTest.DataValidation
             var validation = new ExcelDataValidationInt(_sheet, "A1", ExcelDataValidationType.Whole, _dataValidationNode, _namespaceManager);
             // Assert
             Assert.AreEqual(ExcelDataValidationOperator.greaterThanOrEqual, validation.Operator);
-       }
+        }
 
         [TestMethod, ExpectedException(typeof(InvalidOperationException))]
         public void DataValidations_ShouldThrowIfOperatorIsEqualAndFormula1IsEmpty()

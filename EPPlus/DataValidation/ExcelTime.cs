@@ -153,7 +153,7 @@ namespace OfficeOpenXml.DataValidation
         /// <summary>
         /// Hour between 0 and 23
         /// </summary>
-        public int Hour 
+        public int Hour
         {
             get
             {

@@ -46,7 +46,7 @@ namespace OfficeOpenXml.Table.PivotTable
         internal ExcelPivotTableFieldItem(XmlNamespaceManager ns, XmlNode topNode, ExcelPivotTableField field) :
             base(ns, topNode)
         {
-           _field = field;
+            _field = field;
         }
         /// <summary>
         /// The text. Unique values only
@@ -59,7 +59,7 @@ namespace OfficeOpenXml.Table.PivotTable
             }
             set
             {
-                if(string.IsNullOrEmpty(value))
+                if (string.IsNullOrEmpty(value))
                 {
                     DeleteNode("@n");
                     return;
@@ -68,7 +68,7 @@ namespace OfficeOpenXml.Table.PivotTable
                 {
                     if (item.Text == value)
                     {
-                        throw(new ArgumentException("Duplicate Text"));
+                        throw (new ArgumentException("Duplicate Text"));
                     }
                 }
                 SetXmlNodeString("@n", value);
@@ -78,7 +78,7 @@ namespace OfficeOpenXml.Table.PivotTable
         {
             get
             {
-                return GetXmlNodeInt("@x"); 
+                return GetXmlNodeInt("@x");
             }
         }
         internal string T

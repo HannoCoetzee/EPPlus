@@ -42,7 +42,7 @@ namespace OfficeOpenXml.FormulaParsing.Excel.Functions.Math
             if (nDigits < 0)
             {
                 nDigits *= -1;
-                return CreateResult(System.Math.Round(number / System.Math.Pow(10, nDigits),0, MidpointRounding.AwayFromZero) * System.Math.Pow(10, nDigits), DataType.Integer); 
+                return CreateResult(System.Math.Round(number / System.Math.Pow(10, nDigits), 0, MidpointRounding.AwayFromZero) * System.Math.Pow(10, nDigits), DataType.Integer);
             }
             return CreateResult(System.Math.Round(number, nDigits, MidpointRounding.AwayFromZero), DataType.Decimal);
         }

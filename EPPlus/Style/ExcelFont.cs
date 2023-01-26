@@ -226,7 +226,7 @@ namespace OfficeOpenXml.Style
 
         internal override string Id
         {
-            get 
+            get
             {
                 return Name + Size.ToString() + Family.ToString() + Scheme.ToString() + Bold.ToString()[0] + Italic.ToString()[0] + Strike.ToString()[0] + UnderLine.ToString()[0] + VerticalAlign;
             }

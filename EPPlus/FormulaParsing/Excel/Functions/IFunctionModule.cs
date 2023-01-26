@@ -45,5 +45,5 @@ namespace OfficeOpenXml.FormulaParsing.Excel.Functions
         /// in the Functions collection of this module.
         /// </summary>
         IDictionary<Type, FunctionCompiler> CustomCompilers { get; }
-  }
+    }
 }

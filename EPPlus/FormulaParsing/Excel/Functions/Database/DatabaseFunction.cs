@@ -38,7 +38,7 @@ namespace OfficeOpenXml.FormulaParsing.Excel.Functions.Database
         public DatabaseFunction()
             : this(new RowMatcher())
         {
-            
+
         }
 
         public DatabaseFunction(RowMatcher rowMatcher)

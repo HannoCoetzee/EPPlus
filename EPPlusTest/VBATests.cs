@@ -226,7 +226,7 @@ namespace EPPlusTest
             using (var package = new ExcelPackage(new FileInfo(@"c:\temp\bug\makro.xlsm")))
             {
                 Console.WriteLine(package.Workbook.VbaProject.Modules[0].Name);
-                
+
                 package.SaveAs(new FileInfo(@"c:\temp\bug\makroepp.xlsm"));
             }
         }

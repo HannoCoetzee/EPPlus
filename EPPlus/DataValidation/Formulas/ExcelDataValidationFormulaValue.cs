@@ -61,7 +61,7 @@ namespace OfficeOpenXml.DataValidation.Formulas
         /// <summary>
         /// Typed value
         /// </summary>
-        public T Value 
+        public T Value
         {
             get
             {

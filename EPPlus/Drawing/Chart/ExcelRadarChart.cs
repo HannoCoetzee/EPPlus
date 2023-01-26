@@ -67,9 +67,9 @@ namespace OfficeOpenXml.Drawing.Chart
             {
                 RadarStyle = eRadarStyle.Filled;
             }
-            else if  (ChartType == eChartType.RadarMarkers)
+            else if (ChartType == eChartType.RadarMarkers)
             {
-                RadarStyle =  eRadarStyle.Marker;
+                RadarStyle = eRadarStyle.Marker;
             }
             else
             {
@@ -85,7 +85,7 @@ namespace OfficeOpenXml.Drawing.Chart
         {
             get
             {
-                var v=_chartXmlHelper.GetXmlNodeString(STYLE_PATH);
+                var v = _chartXmlHelper.GetXmlNodeString(STYLE_PATH);
                 if (string.IsNullOrEmpty(v))
                 {
                     return eRadarStyle.Standard;

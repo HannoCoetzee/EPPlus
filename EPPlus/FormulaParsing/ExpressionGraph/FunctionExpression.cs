@@ -109,7 +109,7 @@ namespace OfficeOpenXml.FormulaParsing.ExpressionGraph
                 }
                 return new CompileResult(e.ErrorValue, DataType.ExcelError);
             }
-            
+
         }
 
         public override Expression PrepareForNextChild()

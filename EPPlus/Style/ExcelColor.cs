@@ -40,11 +40,11 @@ namespace OfficeOpenXml.Style
     /// <summary>
     /// Color for cellstyling
     /// </summary>
-    public sealed class ExcelColor :  StyleBase, IColor
+    public sealed class ExcelColor : StyleBase, IColor
     {
         eStyleClass _cls;
         StyleBase _parent;
-        internal ExcelColor(ExcelStyles styles, OfficeOpenXml.XmlHelper.ChangedEventHandler ChangedEvent, int worksheetID, string address, eStyleClass cls, StyleBase parent) : 
+        internal ExcelColor(ExcelStyles styles, OfficeOpenXml.XmlHelper.ChangedEventHandler ChangedEvent, int worksheetID, string address, eStyleClass cls, StyleBase parent) :
             base(styles, ChangedEvent, worksheetID, address)
         {
             _parent = parent;
@@ -112,7 +112,7 @@ namespace OfficeOpenXml.Style
         /// <param name="color">The color</param>
         public void SetColor(Color color)
         {
-            Rgb = color.ToArgb().ToString("X");       
+            Rgb = color.ToArgb().ToString("X");
         }
         /// <summary>
         /// Set the color of the object
@@ -123,7 +123,7 @@ namespace OfficeOpenXml.Style
         /// <param name="blue">Blue component value</param>
         public void SetColor(int alpha, int red, int green, int blue)
         {
-            if(alpha < 0 || red < 0 || green < 0 ||blue < 0 ||
+            if (alpha < 0 || red < 0 || green < 0 || blue < 0 ||
                alpha > 255 || red > 255 || green > 255 || blue > 255)
             {
                 throw (new ArgumentException("Argument range must be from 0 to 255"));
@@ -132,7 +132,7 @@ namespace OfficeOpenXml.Style
         }
         internal override string Id
         {
-            get 
+            get
             {
                 return Theme + Tint + Rgb + Indexed;
             }
@@ -140,7 +140,7 @@ namespace OfficeOpenXml.Style
         private ExcelColorXml GetSource()
         {
             Index = _parent.Index < 0 ? 0 : _parent.Index;
-            switch(_cls)
+            switch (_cls)
             {
                 case eStyleClass.FillBackgroundColor:
                     return _styles.Fills[Index].BackgroundColor;
@@ -159,7 +159,7 @@ namespace OfficeOpenXml.Style
                 case eStyleClass.BorderDiagonal:
                     return _styles.Borders[Index].Diagonal.Color;
                 default:
-                    throw(new Exception("Invalid style-class for Color"));
+                    throw (new Exception("Invalid style-class for Color"));
             }
         }
         internal override void SetIndex(int index)

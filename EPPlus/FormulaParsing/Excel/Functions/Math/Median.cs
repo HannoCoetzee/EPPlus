@@ -45,8 +45,8 @@ namespace OfficeOpenXml.FormulaParsing.Excel.Functions.Math
             }
             else
             {
-                var startIndex = arr.Length/2 - 1;
-                result = (arr[startIndex] + arr[startIndex + 1])/2d;
+                var startIndex = arr.Length / 2 - 1;
+                result = (arr[startIndex] + arr[startIndex + 1]) / 2d;
             }
             return CreateResult(result, DataType.Decimal);
         }

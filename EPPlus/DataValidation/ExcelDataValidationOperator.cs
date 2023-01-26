@@ -48,6 +48,6 @@ namespace OfficeOpenXml.DataValidation
         lessThan = 4,
         lessThanOrEqual = 5,
         notBetween = 1,
-        notEqual= 3
+        notEqual = 3
     }
 }

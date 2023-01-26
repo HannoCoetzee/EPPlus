@@ -92,7 +92,7 @@ namespace OfficeOpenXml.FormulaParsing.ExpressionGraph
             //}
             var cache = _parsingContext.AddressCache;
             var cacheId = cache.GetNewId();
-            if(!cache.Add(cacheId, ExpressionString))
+            if (!cache.Add(cacheId, ExpressionString))
             {
                 throw new InvalidOperationException("Catastropic error occurred, address caching failed");
             }

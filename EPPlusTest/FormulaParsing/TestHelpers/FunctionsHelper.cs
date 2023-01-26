@@ -21,7 +21,7 @@ namespace EPPlusTest.FormulaParsing.TestHelpers
 
         public static IEnumerable<FunctionArgument> Empty()
         {
-            return new List<FunctionArgument>() {new FunctionArgument(null)};
+            return new List<FunctionArgument>() { new FunctionArgument(null) };
         }
     }
 }

@@ -17,7 +17,7 @@ namespace EPPlusTest.FormulaParsing.IntegrationTests.ExcelDataProviderTests
             return new ExcelCell(val, null, 0, row);
         }
 
-      
+
 
         //[TestMethod]
         //public void ShouldExecuteFormulaInRange()

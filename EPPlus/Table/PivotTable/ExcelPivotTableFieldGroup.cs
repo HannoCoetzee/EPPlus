@@ -46,7 +46,7 @@ namespace OfficeOpenXml.Table.PivotTable
         internal ExcelPivotTableFieldGroup(XmlNamespaceManager ns, XmlNode topNode) :
             base(ns, topNode)
         {
-            
+
         }
     }
     /// <summary>
@@ -123,7 +123,7 @@ namespace OfficeOpenXml.Table.PivotTable
             }
             private set
             {
-                SetXmlNodeString(startPath,value.ToString(CultureInfo.InvariantCulture));
+                SetXmlNodeString(startPath, value.ToString(CultureInfo.InvariantCulture));
             }
         }
         const string endPath = "d:fieldGroup/d:rangePr/@endNum";
