@@ -831,7 +831,7 @@ namespace OfficeOpenXml
 #if(Core)
             settings.DtdProcessing = DtdProcessing.Prohibit;
 #else
-            settings.ProhibitDtd = true;            
+            settings.DtdProcessing = DtdProcessing.Prohibit;
 #endif
             XmlReader reader = XmlReader.Create(stream, settings);
             xmlDoc.Load(reader);

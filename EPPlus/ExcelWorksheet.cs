@@ -55,6 +55,7 @@ using OfficeOpenXml.Utils;
 using System.Linq;
 using OfficeOpenXml.Compatibility;
 using OfficeOpenXml.Sparkline;
+using System.Runtime;
 
 namespace OfficeOpenXml
 {
@@ -879,7 +880,7 @@ namespace OfficeOpenXml
             var xr = XmlReader.Create(stream,new XmlReaderSettings() { DtdProcessing = DtdProcessing.Prohibit, IgnoreWhitespace = true });
 #else
             var xr = new XmlTextReader(stream);
-            xr.ProhibitDtd = true;
+            xr.DtdProcessing = DtdProcessing.Prohibit;
             xr.WhitespaceHandling = WhitespaceHandling.None;
 #endif
             LoadColumns(xr);    //columnXml
