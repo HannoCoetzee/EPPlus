@@ -128,9 +128,9 @@ namespace OfficeOpenXml.Utils.CompundDocument
         }
         public static bool IsCompoundDocument(MemoryStream ms)
         {
-            var pos = ms.Position;
+            long pos = ms.Position;
             ms.Position = 0;
-            var b = new byte[8];
+            byte[] b = new byte[8];
             ms.Read(b, 0, 8);
             ms.Position = pos;
             return IsCompoundDocument(b);
