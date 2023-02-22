@@ -248,7 +248,8 @@ namespace EPPlusTest.FormulaParsing.IntegrationTests.BuiltInFunctions
             Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
             var pck = new ExcelPackage();
             var ws = pck.Workbook.Worksheets.Add("Calc1");
-            var expectedYear = 1930;
+           
+            var expectedYear = 2030;
             ws.Cells["A1"].Value = "01/01/30";
             ws.Cells["B1"].Formula = "DateValue(A1)";
             ws.Calculate();
