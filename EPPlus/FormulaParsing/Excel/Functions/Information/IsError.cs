@@ -55,7 +55,7 @@ namespace OfficeOpenXml.FormulaParsing.Excel.Functions.Information
                     {
                         return CreateResult(true, DataType.Boolean);
                     }
-                }                
+                }
             }
             return CreateResult(false, DataType.Boolean);
         }

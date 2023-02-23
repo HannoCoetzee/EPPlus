@@ -101,12 +101,12 @@ namespace OfficeOpenXml
         internal ExcelEncryption(EncryptionAlgorithm encryptionAlgorithm)
         {
             Algorithm = encryptionAlgorithm;
-        }        
+        }
         bool _isEncrypted = false;
         /// <summary>
         /// Is the package encrypted
         /// </summary>
-        public bool IsEncrypted 
+        public bool IsEncrypted
         {
             get
             {
@@ -125,11 +125,11 @@ namespace OfficeOpenXml
                 }
             }
         }
-        string _password=null;
+        string _password = null;
         /// <summary>
         /// The password used to encrypt the workbook.
         /// </summary>
-        public string Password 
+        public string Password
         {
             get
             {

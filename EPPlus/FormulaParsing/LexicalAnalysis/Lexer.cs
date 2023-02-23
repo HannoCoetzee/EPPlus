@@ -40,7 +40,7 @@ namespace OfficeOpenXml.FormulaParsing.LexicalAnalysis
     public class Lexer : ILexer
     {
         public Lexer(FunctionRepository functionRepository, INameValueProvider nameValueProvider)
-            :this(new SourceCodeTokenizer(functionRepository, nameValueProvider), new SyntacticAnalyzer())
+            : this(new SourceCodeTokenizer(functionRepository, nameValueProvider), new SyntacticAnalyzer())
         {
 
         }

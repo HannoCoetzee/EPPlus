@@ -38,7 +38,7 @@ namespace OfficeOpenXml.Style
     internal interface IExcelCell
     {
         #region "public properties"
-        object Value {get;set;}
+        object Value { get; set; }
         string StyleName { get; }
         int StyleID { get; set; }
         ExcelStyle Style { get; }

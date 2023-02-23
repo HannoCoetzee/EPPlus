@@ -26,7 +26,7 @@
  * ******************************************************************************
  * Jan Källman                      Added       		        2018-03-20
  *******************************************************************************/
- using OfficeOpenXml;
+using OfficeOpenXml;
 using OfficeOpenXml.Sparkline;
 using OfficeOpenXml.Table;
 using System;
@@ -59,7 +59,7 @@ namespace EPPlusSamples
 
                 // Add a new worksheet to the empty workbook and load the fx rates from the text
                 var ws = package.Workbook.Worksheets.Add("SEKRates");
-                
+
                 //Load the sample data with a Swedish culture setting
                 ws.Cells["A1"].LoadFromText(txt, new ExcelTextFormat() { Delimiter = ';', Culture = CultureInfo.GetCultureInfo("sv-SE") }, TableStyles.Light10, true);
                 ws.Cells["A2:A12"].Style.Numberformat.Format = "yyyy-mm-dd";
@@ -68,7 +68,7 @@ namespace EPPlusSamples
                 ws.Cells["A15"].Value = "Column";
                 var sparklineCol = ws.SparklineGroups.Add(eSparklineType.Column, ws.Cells["B15:Q15"], ws.Cells["B2:Q12"]);
                 sparklineCol.High = true;
-                sparklineCol.ColorHigh.SetColor(Color.Red); 
+                sparklineCol.ColorHigh.SetColor(Color.Red);
 
                 // Add a line sparkline for  all currencies
                 ws.Cells["A16"].Value = "Line";
@@ -95,5 +95,5 @@ namespace EPPlusSamples
                 package.SaveAs(Utils.GetFileInfo("Sample16.xlsx"));
             }
         }
-}
+    }
 }

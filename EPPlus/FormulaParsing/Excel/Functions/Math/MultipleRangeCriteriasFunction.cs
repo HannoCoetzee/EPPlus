@@ -40,9 +40,9 @@ namespace OfficeOpenXml.FormulaParsing.Excel.Functions.Math
         private readonly ExpressionEvaluator _expressionEvaluator;
 
         protected MultipleRangeCriteriasFunction()
-            :this(new ExpressionEvaluator())
+            : this(new ExpressionEvaluator())
         {
-            
+
         }
 
         protected MultipleRangeCriteriasFunction(ExpressionEvaluator evaluator)

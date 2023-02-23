@@ -63,7 +63,7 @@ namespace OfficeOpenXml.FormulaParsing.ExpressionGraph
             get { return _children.Any(); }
         }
 
-        public virtual Expression  PrepareForNextChild()
+        public virtual Expression PrepareForNextChild()
         {
             return this;
         }
@@ -112,7 +112,7 @@ namespace OfficeOpenXml.FormulaParsing.ExpressionGraph
             if (Prev != null)
             {
                 Prev.Next = expression;
-            }            
+            }
             return expression;
         }
 

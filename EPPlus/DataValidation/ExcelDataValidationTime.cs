@@ -46,7 +46,7 @@ namespace OfficeOpenXml.DataValidation
     /// </summary>
     public class ExcelDataValidationTime : ExcelDataValidationWithFormula2<IExcelDataValidationFormulaTime>, IExcelDataValidationTime
     {
-         /// <summary>
+        /// <summary>
         /// Constructor
         /// </summary>
         /// <param name="worksheet"></param>

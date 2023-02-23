@@ -53,13 +53,13 @@ namespace OfficeOpenXml.FormulaParsing.LexicalAnalysis
         }
 
         public bool IsNegated { get; private set; }
-        
+
         public void Negate()
         {
 
             if (
-                TokenType == TokenType.Decimal 
-                || 
+                TokenType == TokenType.Decimal
+                ||
                 TokenType == TokenType.Integer
                 ||
                 TokenType == TokenType.ExcelAddress)

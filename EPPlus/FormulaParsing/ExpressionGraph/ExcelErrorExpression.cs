@@ -50,7 +50,7 @@ namespace OfficeOpenXml.FormulaParsing.ExpressionGraph
         public ExcelErrorExpression(ExcelErrorValue error)
             : this(error.ToString(), error)
         {
-            
+
         }
 
         public override bool IsGroupedExpression

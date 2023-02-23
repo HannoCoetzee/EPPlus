@@ -57,7 +57,7 @@ namespace OfficeOpenXml.FormulaParsing.Excel.Functions.DateTime
                                                                              startDay);
             return CreateResult(week, DataType.Integer);
         }
-        
-        
+
+
     }
 }

@@ -49,7 +49,7 @@ namespace OfficeOpenXml.FormulaParsing.Excel.Functions.Math
             else
             {
                 result = (int)System.Math.Floor(number);
-                result = result - (result % System.Math.Pow(10, (nDecimals*-1)));
+                result = result - (result % System.Math.Pow(10, (nDecimals * -1)));
             }
             return CreateResult(result * nFactor, DataType.Decimal);
         }
@@ -58,8 +58,8 @@ namespace OfficeOpenXml.FormulaParsing.Excel.Functions.Math
         {
             var integerPart = System.Math.Floor(number);
             var decimalPart = number - integerPart;
-            decimalPart = System.Math.Pow(10d, nDecimals)*decimalPart;
-            decimalPart = System.Math.Truncate(decimalPart)/System.Math.Pow(10d, nDecimals);
+            decimalPart = System.Math.Pow(10d, nDecimals) * decimalPart;
+            decimalPart = System.Math.Truncate(decimalPart) / System.Math.Pow(10d, nDecimals);
             var result = integerPart + decimalPart;
             return result;
         }

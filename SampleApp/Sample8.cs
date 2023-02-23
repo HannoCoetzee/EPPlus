@@ -48,16 +48,16 @@ namespace EPPlusSamples
         /// <param name="outputDir">The path where sample7.xlsx is</param>
         public static void RunLinqSample()
         {
-	        Console.WriteLine("Now open sample 7 again and perform some Linq queries...");
-		    Console.WriteLine();
+            Console.WriteLine("Now open sample 7 again and perform some Linq queries...");
+            Console.WriteLine();
 
             FileInfo existingFile = Utils.GetFileInfo("sample7.xlsx", false);
             using (ExcelPackage package = new ExcelPackage(existingFile))
             {
                 ExcelWorksheet sheet = package.Workbook.Worksheets[1];
-                
+
                 //Select all cells in column d between 9990 and 10000
-                var query1= (from cell in sheet.Cells["d:d"] where cell.Value is double && (double)cell.Value >= 9990 && (double)cell.Value <= 10000 select cell);
+                var query1 = (from cell in sheet.Cells["d:d"] where cell.Value is double && (double)cell.Value >= 9990 && (double)cell.Value <= 10000 select cell);
 
                 Console.WriteLine("Print all cells with value between 9990 and 10000 in column D ...");
                 Console.WriteLine();
@@ -69,7 +69,7 @@ namespace EPPlusSamples
                     count++;
                 }
 
-                Console.WriteLine("{0} cells found ...",count);
+                Console.WriteLine("{0} cells found ...", count);
                 Console.WriteLine();
 
                 //Select all bold cells
@@ -92,9 +92,9 @@ namespace EPPlusSamples
 
                 //Here we use more than one column in the where clause. We start by searching column D, then use the Offset method to check the value of column C.
                 var query3 = (from cell in sheet.Cells["d:d"]
-                              where cell.Value is double && 
-                                    (double)cell.Value >= 9500 && (double)cell.Value <= 10000 && 
-                                    cell.Offset(0, -1).GetValue<DateTime>().Year == DateTime.Today.Year+1 
+                              where cell.Value is double &&
+                                    (double)cell.Value >= 9500 && (double)cell.Value <= 10000 &&
+                                    cell.Offset(0, -1).GetValue<DateTime>().Year == DateTime.Today.Year + 1
                               select cell);
 
                 Console.WriteLine();

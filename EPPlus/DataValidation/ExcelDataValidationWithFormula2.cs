@@ -53,7 +53,7 @@ namespace OfficeOpenXml.DataValidation
 
         }
 
-         /// <summary>
+        /// <summary>
         /// Constructor
         /// </summary>
         /// <param name="worksheet">Worksheet that owns the validation</param>
@@ -63,7 +63,7 @@ namespace OfficeOpenXml.DataValidation
         internal ExcelDataValidationWithFormula2(ExcelWorksheet worksheet, string address, ExcelDataValidationType validationType, XmlNode itemElementNode)
             : base(worksheet, address, validationType, itemElementNode)
         {
-            
+
         }
 
         /// <summary>

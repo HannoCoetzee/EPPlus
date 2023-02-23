@@ -129,7 +129,7 @@ namespace OfficeOpenXml.FormulaParsing.LexicalAnalysis
             var count = _result.Count;
             if (count > 0)
             {
-                _result.RemoveAt(count - 1);   
+                _result.RemoveAt(count - 1);
             }
             _result.Add(newToken);
         }

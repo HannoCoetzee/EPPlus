@@ -18,6 +18,8 @@ using System.Dynamic;
 using System.Globalization;
 using OfficeOpenXml.Drawing;
 using OfficeOpenXml.FormulaParsing;
+using System.Threading.Tasks;
+using OfficeOpenXml.FormulaParsing.Excel.Functions.DateTime;
 
 namespace EPPlusTest
 {
@@ -2396,7 +2398,10 @@ namespace EPPlusTest
                 ws.Cells["A1"].Value = new DateTime(2019, 3, 7);
                 ws.Cells["A1"].Style.Numberformat.Format = "mm-dd-yy";
 
-                Assert.AreEqual("2019-03-07", ws.Cells["A1"].Text);
+                DateTime expectedDate = DateTime.Parse("2019-03-07", new CultureInfo("en-US"));
+                DateTime actualDate = DateTime.Parse(ws.Cells["A1"].Text, new CultureInfo("en-US"));
+
+                Assert.AreEqual(expectedDate, actualDate);
             }
         }
         [TestMethod]
@@ -2412,7 +2417,7 @@ namespace EPPlusTest
         {
             var p = OpenTemplatePackage("Issue460.xlsx");
             var ws = p.Workbook.Worksheets[0];
-            var newWs=p.Workbook.Worksheets.Add("NewSheet");
+            var newWs = p.Workbook.Worksheets.Add("NewSheet");
             ws.Cells.Copy(newWs.Cells);
             SaveWorksheet("Issue460_saved.xlsx");
         }

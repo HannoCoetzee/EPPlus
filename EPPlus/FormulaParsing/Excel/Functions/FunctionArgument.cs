@@ -39,7 +39,7 @@ namespace OfficeOpenXml.FormulaParsing.Excel.Functions
         }
 
         public FunctionArgument(object val, DataType dataType)
-            :this(val)
+            : this(val)
         {
             DataType = dataType;
         }
@@ -95,7 +95,7 @@ namespace OfficeOpenXml.FormulaParsing.Excel.Functions
                     Value = ((ExcelDataProvider.INameInfo)Value).Value;
                 }
                 var v = Value as ExcelDataProvider.IRangeInfo;
-                if (v==null)
+                if (v == null)
                 {
                     return Value;
                 }

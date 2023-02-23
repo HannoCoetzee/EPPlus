@@ -33,7 +33,7 @@ namespace OfficeOpenXml.FormulaParsing.Excel.Functions.Math
     public class Subtotal : ExcelFunction
     {
         private Dictionary<int, HiddenValuesHandlingFunction> _functions = new Dictionary<int, HiddenValuesHandlingFunction>();
-        
+
         public Subtotal()
         {
             Initialize();

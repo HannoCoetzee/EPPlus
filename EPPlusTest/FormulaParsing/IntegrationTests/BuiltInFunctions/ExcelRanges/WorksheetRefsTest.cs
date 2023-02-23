@@ -24,7 +24,7 @@ namespace EPPlusTest.FormulaParsing.IntegrationTests.BuiltInFunctions.ExcelRange
         [TestCleanup]
         public void Cleanup()
         {
-            
+
             _package.Dispose();
         }
 

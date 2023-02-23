@@ -115,7 +115,7 @@ namespace OfficeOpenXml.FormulaParsing
                 }
             });
             return functions;
-        } 
+        }
 
         /// <summary>
         /// Parses the supplied <paramref name="formula"/> and returns the result.

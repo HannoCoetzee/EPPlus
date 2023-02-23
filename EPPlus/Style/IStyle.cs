@@ -38,7 +38,7 @@ namespace OfficeOpenXml.Style
     internal interface IStyle
     {
         void SetNewStyleID(string value);
-        ulong Id {get;}
-        ExcelStyle ExcelStyle{get;}
+        ulong Id { get; }
+        ExcelStyle ExcelStyle { get; }
     }
 }

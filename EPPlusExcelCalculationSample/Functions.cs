@@ -22,7 +22,7 @@ namespace EPPlusExcelFormDemo
 
             var sb = new StringBuilder();
             foreach (var f in functions)
-            {                
+            {
                 sb.AppendLine(f.ToUpper());
             }
             textBox1.Text = sb.ToString();

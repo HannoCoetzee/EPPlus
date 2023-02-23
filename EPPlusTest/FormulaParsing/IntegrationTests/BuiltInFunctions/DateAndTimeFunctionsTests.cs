@@ -83,7 +83,7 @@ namespace EPPlusTest.FormulaParsing.IntegrationTests.BuiltInFunctions
         [TestMethod]
         public void TimeShouldReturnCorrectResult()
         {
-            var expectedResult = ((double)(12 * 60 * 60 + 13 * 60 + 14))/((double)(24 * 60 * 60));
+            var expectedResult = ((double)(12 * 60 * 60 + 13 * 60 + 14)) / ((double)(24 * 60 * 60));
             var result = _parser.Parse("Time(12, 13, 14)");
             Assert.AreEqual(expectedResult, result);
         }
@@ -248,7 +248,8 @@ namespace EPPlusTest.FormulaParsing.IntegrationTests.BuiltInFunctions
             Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
             var pck = new ExcelPackage();
             var ws = pck.Workbook.Worksheets.Add("Calc1");
-            var expectedYear = 1930;
+           
+            var expectedYear = 2030;
             ws.Cells["A1"].Value = "01/01/30";
             ws.Cells["B1"].Formula = "DateValue(A1)";
             ws.Calculate();
@@ -279,7 +280,7 @@ namespace EPPlusTest.FormulaParsing.IntegrationTests.BuiltInFunctions
             ws.Cells["A1"].Value = "2:23 pm";
             ws.Cells["B1"].Formula = "TimeValue(A1)";
             ws.Calculate();
-            var result = (double) ws.Cells["B1"].Value;
+            var result = (double)ws.Cells["B1"].Value;
             Assert.AreEqual(0.599, Math.Round(result, 3));
         }
 

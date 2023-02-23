@@ -84,7 +84,7 @@ namespace OfficeOpenXml.FormulaParsing.ExcelUtilities
             }
             else if (op is DateTime)
             {
-                d = ((DateTime) op).ToOADate();
+                d = ((DateTime)op).ToOADate();
                 return true;
             }
             else if (op != null)
@@ -126,7 +126,7 @@ namespace OfficeOpenXml.FormulaParsing.ExcelUtilities
                     bool rightIsDate = DateTime.TryParse(right, out date);
                     if (leftIsNumeric && rightIsNumeric)
                     {
-                         return EvaluateOperator(leftNum, rightNum, op);
+                        return EvaluateOperator(leftNum, rightNum, op);
                     }
                     if (leftIsNumeric && rightIsDate)
                     {

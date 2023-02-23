@@ -39,27 +39,27 @@ namespace OfficeOpenXml.Table.PivotTable
     /// <summary>
     /// A page / report filter field
     /// </summary>
-    public class ExcelPivotTablePageFieldSettings  : XmlHelper
+    public class ExcelPivotTablePageFieldSettings : XmlHelper
     {
         ExcelPivotTableField _field;
         internal ExcelPivotTablePageFieldSettings(XmlNamespaceManager ns, XmlNode topNode, ExcelPivotTableField field, int index) :
             base(ns, topNode)
         {
-            if (GetXmlNodeString("@hier")=="")
+            if (GetXmlNodeString("@hier") == "")
             {
                 Hier = -1;
             }
             _field = field;
         }
-        internal int Index 
-        { 
+        internal int Index
+        {
             get
             {
                 return GetXmlNodeInt("@fld");
             }
             set
             {
-                SetXmlNodeString("@fld",value.ToString());
+                SetXmlNodeString("@fld", value.ToString());
             }
         }
         /// <summary>

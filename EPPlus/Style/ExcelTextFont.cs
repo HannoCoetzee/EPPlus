@@ -46,7 +46,7 @@ namespace OfficeOpenXml.Style
     {
         Dash,
         DashHeavy,
-        DashLong, 
+        DashLong,
         DashLongHeavy,
         Double,
         DotDash,
@@ -110,7 +110,7 @@ namespace OfficeOpenXml.Style
 
         protected internal void CreateTopNode()
         {
-            if (_path!="" && TopNode == _rootNode)
+            if (_path != "" && TopNode == _rootNode)
             {
                 CreateNode(_path);
                 TopNode = _rootNode.SelectSingleNode(_path, NameSpaceManager);

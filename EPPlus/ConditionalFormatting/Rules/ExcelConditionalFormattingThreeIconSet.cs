@@ -101,7 +101,7 @@ namespace OfficeOpenXml.ConditionalFormatting
                 int pos = 1;
                 foreach (XmlNode node in itemElementNode.SelectNodes("d:iconSet/d:cfvo", NameSpaceManager))
                 {
-                    if(pos==1)
+                    if (pos == 1)
                     {
                         Icon1 = new ExcelConditionalFormattingIconDataBarValue(
                                 type,

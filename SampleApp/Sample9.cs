@@ -54,7 +54,7 @@ namespace EPPlusSamples
         public static string RunSample9()
         {
             FileInfo newFile = Utils.GetFileInfo(@"\sample9.xlsx");
-            
+
             using (ExcelPackage package = new ExcelPackage())
             {
                 LoadFile1(package);
@@ -75,11 +75,11 @@ namespace EPPlusSamples
             format.SkipLinesBeginning = 2;
             format.SkipLinesEnd = 1;
 
-            var csvDir= new DirectoryInfo(AppDomain.CurrentDomain.BaseDirectory + "csv"); 
+            var csvDir = new DirectoryInfo(AppDomain.CurrentDomain.BaseDirectory + "csv");
 
             //Now read the file into the sheet. Start from cell A1. Create a table with style 27. First row contains the header.
             Console.WriteLine("Load the text file...");
-            var range = sheet.Cells["A1"].LoadFromText(Utils.GetFileInfo(csvDir,"Sample9-1.txt",false), format, TableStyles.Medium27, true);
+            var range = sheet.Cells["A1"].LoadFromText(Utils.GetFileInfo(csvDir, "Sample9-1.txt", false), format, TableStyles.Medium27, true);
 
             Console.WriteLine("Format the table...");
             //Tables don't support custom styling at this stage(you can of course format the cells), but we can create a Namedstyle for a column...
@@ -106,7 +106,7 @@ namespace EPPlusSamples
             tbl.Columns[5].DataCellStyleName = "TableNumber";
             tbl.Columns[6].TotalsRowFunction = RowFunctions.Sum;
             tbl.Columns[6].DataCellStyleName = "TableNumber";
-            
+
             Console.WriteLine("Create the chart...");
             //Now add a stacked areachart...
             var chart = sheet.Drawings.AddChart("chart1", eChartType.AreaStacked);
@@ -119,7 +119,7 @@ namespace EPPlusSamples
                 var ser = chart.Series.Add(range.Offset(1, col, range.End.Row - 1, 1), range.Offset(1, 0, range.End.Row - 1, 1));
                 ser.HeaderAddress = range.Offset(0, col, 1, 1);
             }
-            
+
             //Set the style to 27.
             chart.Style = eChartStyle.Style27;
 
@@ -135,7 +135,7 @@ namespace EPPlusSamples
 
             //Create the format object to describe the text file
             var format = new ExcelTextFormat();
-            format.Delimiter='\t'; //Tab
+            format.Delimiter = '\t'; //Tab
             format.SkipLinesBeginning = 1;
             CultureInfo ci = new CultureInfo("sv-SE");          //Use your choice of Culture
             ci.NumberFormat.NumberDecimalSeparator = ",";       //Decimal is comma
@@ -151,7 +151,7 @@ namespace EPPlusSamples
             range.Offset(1, range.End.Column, range.End.Row - range.Start.Row, 1).FormulaR1C1 = "RC[-1]-RC[-2]";
 
             //Add a table...
-            var tbl = sheet.Tables.Add(range.Offset(0,0,range.End.Row-range.Start.Row+1, range.End.Column-range.Start.Column+2),"Table");
+            var tbl = sheet.Tables.Add(range.Offset(0, 0, range.End.Row - range.Start.Row + 1, range.End.Column - range.Start.Column + 2), "Table");
             tbl.ShowTotal = true;
             tbl.Columns[0].TotalsRowLabel = "Total";
             tbl.Columns[1].TotalsRowFormula = "COUNT(3,Table[Product])";    //Add a custom formula
@@ -168,8 +168,8 @@ namespace EPPlusSamples
             var chart = sheet.Drawings.AddChart("chart2", eChartType.ColumnStacked);
             chart.SetPosition(0, 540);
             chart.SetSize(800, 600);
-        
-            var serie1= chart.Series.Add(range.Offset(1, 3, range.End.Row - 1, 1), range.Offset(1, 1, range.End.Row - 1, 1));
+
+            var serie1 = chart.Series.Add(range.Offset(1, 3, range.End.Row - 1, 1), range.Offset(1, 1, range.End.Row - 1, 1));
             serie1.Header = "Purchase Price";
             var serie2 = chart.Series.Add(range.Offset(1, 5, range.End.Row - 1, 1), range.Offset(1, 1, range.End.Row - 1, 1));
             serie2.Header = "Profit";
@@ -183,7 +183,7 @@ namespace EPPlusSamples
             //By default the secondary XAxis is not visible, but we want to show it...
             chartType2.XAxis.Deleted = false;
             chartType2.XAxis.TickLabelPosition = eTickLabelPosition.High;
-            
+
             //Set the max value for the Y axis...
             chartType2.YAxis.MaxValue = 50;
 

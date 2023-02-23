@@ -64,7 +64,7 @@ namespace OfficeOpenXml.FormulaParsing.ExpressionGraph
             {
                 return new CompileResult(obj, DataType.Boolean);
             }
-            if (obj.GetType().Equals(typeof (ExcelErrorValue)))
+            if (obj.GetType().Equals(typeof(ExcelErrorValue)))
             {
                 return new CompileResult(obj, DataType.ExcelError);
             }

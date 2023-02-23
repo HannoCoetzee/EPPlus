@@ -57,7 +57,7 @@ namespace OfficeOpenXml.FormulaParsing.Excel.Functions.DateTime
 
         protected double SecondsInADay
         {
-            get{ return 24 * 60 * 60; }
+            get { return 24 * 60 * 60; }
         }
 
         protected double GetTimeSerialNumber(double seconds)

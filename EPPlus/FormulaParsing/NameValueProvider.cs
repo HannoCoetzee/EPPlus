@@ -47,7 +47,7 @@ namespace OfficeOpenXml.FormulaParsing
 
         public void Reload()
         {
-            
+
         }
     }
 }

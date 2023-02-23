@@ -73,9 +73,9 @@ namespace EPPlusSamples
                 var sheet = package.Workbook.Worksheets.Add("Quiz");
                 sheet.View.ShowGridLines = false;
                 sheet.View.ShowHeaders = false;
-                using(var range=sheet.Cells["A:XFD"])
+                using (var range = sheet.Cells["A:XFD"])
                 {
-                    range.Style.Fill.PatternType=ExcelFillStyle.Solid;
+                    range.Style.Fill.PatternType = ExcelFillStyle.Solid;
                     range.Style.Fill.BackgroundColor.SetColor(Color.LightGray);
                     range.Style.Font.Name = "Broadway";
                     range.Style.Hidden = true;
@@ -167,7 +167,7 @@ namespace EPPlusSamples
 
             //Now lets correct the user form...
             var packAnswers = new ExcelPackage(answerFile, "EPPlus");    //Supply the password, so the file can be decrypted
-            var packUser =  new ExcelPackage(JKAnswerFile, "JK");        //Supply the password, so the file can be decrypted
+            var packUser = new ExcelPackage(JKAnswerFile, "JK");        //Supply the password, so the file can be decrypted
 
             var wsAnswers = packAnswers.Workbook.Worksheets[1];
             var wsUser = packUser.Workbook.Worksheets[1];

@@ -57,5 +57,5 @@ namespace OfficeOpenXml.FormulaParsing.Excel.Functions
         {
             get { return _customCompilers; }
         }
-  }
+    }
 }

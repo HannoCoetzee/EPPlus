@@ -37,13 +37,13 @@ using OfficeOpenXml.ConditionalFormatting;
 
 namespace OfficeOpenXml.ConditionalFormatting.Contracts
 {
-  /// <summary>
-  /// IExcelConditionalFormattingAverageGroup
-  /// </summary>
-  public interface IExcelConditionalFormattingAverageGroup
-    : IExcelConditionalFormattingRule
-  {
-    #region Public Properties
-    #endregion Public Properties
-  }
+    /// <summary>
+    /// IExcelConditionalFormattingAverageGroup
+    /// </summary>
+    public interface IExcelConditionalFormattingAverageGroup
+      : IExcelConditionalFormattingRule
+    {
+        #region Public Properties
+        #endregion Public Properties
+    }
 }

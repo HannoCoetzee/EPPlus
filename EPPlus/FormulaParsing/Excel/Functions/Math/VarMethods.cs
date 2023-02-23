@@ -62,7 +62,7 @@ namespace OfficeOpenXml.FormulaParsing.Excel.Functions.Math
         {
             double avg = args.Select(x => (double)x).Average();
             double d = args.Aggregate(0.0, (total, next) => total += System.Math.Pow(next - avg, 2));
-            return Divide(d, args.Count()); 
+            return Divide(d, args.Count());
         }
     }
 }

@@ -46,7 +46,7 @@ namespace EPPlusTest.FormulaParsing.IntegrationTests.BuiltInFunctions
         [TestMethod]
         public void IsTextShouldReturnTrueWhenReferencedCellContainsText()
         {
-            using(var pck = new ExcelPackage())
+            using (var pck = new ExcelPackage())
             {
                 var sheet = pck.Workbook.Worksheets.Add("Test");
                 sheet.Cells["A1"].Value = "Abc";

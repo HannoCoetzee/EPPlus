@@ -41,13 +41,13 @@ namespace OfficeOpenXml.FormulaParsing.Excel.Functions.Math
             {
                 foreach (var arg in arguments)
                 {
-                    retVal += Calculate(arg, context);                    
+                    retVal += Calculate(arg, context);
                 }
             }
             return CreateResult(retVal, DataType.Decimal);
         }
 
-        
+
         private double Calculate(FunctionArgument arg, ParsingContext context)
         {
             var retVal = 0d;

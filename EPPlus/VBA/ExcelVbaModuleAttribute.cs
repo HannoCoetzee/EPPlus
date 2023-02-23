@@ -13,11 +13,11 @@ namespace OfficeOpenXml.VBA
         /// <summary>
         /// A string
         /// </summary>
-        String=0,
+        String = 0,
         /// <summary>
         /// Not a string
         /// </summary>
-        NonString=1
+        NonString = 1
     }
     public class ExcelVbaModuleAttribute
     {

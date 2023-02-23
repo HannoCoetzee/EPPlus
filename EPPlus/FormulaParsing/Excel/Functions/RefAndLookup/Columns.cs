@@ -38,7 +38,7 @@ namespace OfficeOpenXml.FormulaParsing.Excel.Functions.RefAndLookup
         public override CompileResult Execute(IEnumerable<FunctionArgument> arguments, ParsingContext context)
         {
             ValidateArguments(arguments, 1);
-            var r=arguments.ElementAt(0).ValueAsRangeInfo;
+            var r = arguments.ElementAt(0).ValueAsRangeInfo;
             if (r != null)
             {
                 return CreateResult(r.Address._toCol - r.Address._fromCol + 1, DataType.Integer);

@@ -37,14 +37,14 @@ using OfficeOpenXml.ConditionalFormatting;
 
 namespace OfficeOpenXml.ConditionalFormatting.Contracts
 {
-  /// <summary>
-  /// IExcelConditionalFormattingGreaterThanOrEqual
-  /// </summary>
-  public interface IExcelConditionalFormattingGreaterThanOrEqual
-    : IExcelConditionalFormattingRule,
-    IExcelConditionalFormattingWithFormula
-  {
-    #region Public Properties
-    #endregion Public Properties
-  }
+    /// <summary>
+    /// IExcelConditionalFormattingGreaterThanOrEqual
+    /// </summary>
+    public interface IExcelConditionalFormattingGreaterThanOrEqual
+      : IExcelConditionalFormattingRule,
+      IExcelConditionalFormattingWithFormula
+    {
+        #region Public Properties
+        #endregion Public Properties
+    }
 }

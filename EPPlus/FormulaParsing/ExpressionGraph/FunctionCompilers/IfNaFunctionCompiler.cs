@@ -10,9 +10,9 @@ namespace OfficeOpenXml.FormulaParsing.ExpressionGraph.FunctionCompilers
     public class IfNaFunctionCompiler : FunctionCompiler
     {
         public IfNaFunctionCompiler(ExcelFunction function, ParsingContext context)
-            :base(function, context)
+            : base(function, context)
         {
-            
+
         }
 
         public override CompileResult Compile(IEnumerable<Expression> children)

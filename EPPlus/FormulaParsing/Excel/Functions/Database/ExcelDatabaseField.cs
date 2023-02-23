@@ -31,7 +31,7 @@ namespace OfficeOpenXml.FormulaParsing.Excel.Functions.Database
 {
     public class ExcelDatabaseField
     {
-        
+
         public string FieldName { get; private set; }
         public int ColIndex { get; private set; }
 

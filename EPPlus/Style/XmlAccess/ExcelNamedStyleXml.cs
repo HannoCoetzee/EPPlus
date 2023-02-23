@@ -65,7 +65,7 @@ namespace OfficeOpenXml.Style.XmlAccess
                 return Name;
             }
         }
-        int _styleXfId=0;
+        int _styleXfId = 0;
         const string idPath = "@xfId";
         /// <summary>
         /// Named style index
@@ -137,9 +137,9 @@ namespace OfficeOpenXml.Style.XmlAccess
             TopNode = topNode;
             SetXmlNodeString(namePath, _name);
             SetXmlNodeString("@xfId", _styles.CellStyleXfs[StyleXfId].newID.ToString());
-            if (BuildInId>=0) SetXmlNodeString("@builtinId", BuildInId.ToString());
-            if(CustomBuildin) SetXmlNodeBool(customBuiltinPath, true);
-            return TopNode;            
+            if (BuildInId >= 0) SetXmlNodeString("@builtinId", BuildInId.ToString());
+            if (CustomBuildin) SetXmlNodeBool(customBuiltinPath, true);
+            return TopNode;
         }
     }
 }
